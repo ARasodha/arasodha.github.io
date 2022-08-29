@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Start Favicon  TODO Edit Favicon --> 
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/apple-touch-icon.69e0907d.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="data:image/png;base64,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"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAArdJREFUOE+lkz1sFEcYht/Z292Z2Tnbp3MWX0GMURpaCsBFJHI+3NgNFFCkCrJBURIXFBQ0CFc0UaRITlL4rBRIFBEFFCZS8BkLJCR+pDRRRIGEHVKALgbf+XZm9udm0O4hkhRJ46+aYr5H73zzfAR7LJL3W4BshKHgY2OibAyR/wM1jrLqVS/6pN2OCGALwN0wLJtq5fQw9Wc81+UwOdVa2L7NjwQgxhJiHSDNjNT99Da2d27U2+1eAVg7eHCMUndpOBDT3POoS/IWAhIEeTpYGcEaiz4sdNaPtVa/WBIvTP72/NUgwcRErURLK1UhprjvM88poVStIjh5CjAG8tZNZG9eo29yQKa7Uq47iOeO/r758h0grMErN0eDoJEDKKVgR49heOFCMaHut99AP3mMJEmgs1TvSNlKdX++vvkOsDoR1miJNqtcNITvMX+kgpHP5sCOTxUDUK01dK/9iKTTgcoy3VGyZVI5X99sDxKshmHNDbzlSsBPCN9nbHwco5cuw3S7ICUHJCjj9dVF6BcvINNU7yi1lvSSc7Pt9wBRI7y8XOH8BBdlNnS8jsrZz6EfPQCIA3ZkEjsrP6B3fwMyinRXybW+6p2bbUeDBD+FosZp0BzhvBGMfsCq5xcQfFyH2e0WRjhDw5D31vGmuQS5/ZfuKNWSsZw/808Apbw5xHhDfHiAjV68Aqsl1PrPBYBPzYAwhu2vFyH/2NJdrVpxrP4N8Hy6IhifYvsPMNGYQfrsKeJfHxZDpIePwfvoEKLWbeg/t3Sk1XqaxHPvE1zfJ8Zcx1nySu606/nUoRxINEwSD57gU8BnMLFCliZxmmZ3ssh89WkUDUT6Dijzine6BGcGFkH+97nIKJwuEIWYA6khs75Z1bvpjS+Bgcr5Mn0PCF9AuMWt/64MsEmE6Avg72Xay0a/BZXXPiCqiriDAAAAAElFTkSuQmCC"
+    />
+    <link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjoiIiwic2hvcnRfbmFtZSI6IiIsImljb25zIjpbeyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtMTkyeDE5Mi5wbmciLCJzaXplcyI6IjE5MngxOTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn0seyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtNTEyeDUxMi5wbmciLCJzaXplcyI6IjUxMng1MTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn1dLCJ0aGVtZV9jb2xvciI6IiNmZmZmZmYiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiI2ZmZmZmZiIsImRpc3BsYXkiOiJzdGFuZGFsb25lIn0=" />
+    <!-- End Favicon  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arjun Rasodha</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  <script type="module" crossorigin src="/assets/index.a32715e1.js"></script>
+  <link rel="stylesheet" href="/assets/index.03f17954.css">
+</head>
+  <body>
+    <!-- Contact Buttons -->
+    <div class="flex flex-col fixed z-50 w-12 text-2xl space-y-2 top-3 right-3">
+      <a
+        href="#"
+        id="menu"
+        class="
+          flex
+          h-12
+          items-center
+          shadow-md
+          justify-center
+          font-medium
+          rounded-md
+          text-white
+          bg-midnightblue
+          hover:bg-gray-600
+        "
+      >
+        <i class="fas fa-bars"></i>
+      </a>
+      <a
+        href="mailto:arjunrasodha4@gmail.com"
+        class="
+          menuItem
+          flex
+          h-12
+          items-center
+          shadow-md
+          justify-center
+          border border-transparent
+          font-medium
+          rounded-full
+          text-white
+          bg-midnightblue
+          hover:bg-gray-600
+        "
+        target="_blank"
+      >
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/arjunrasodha/"
+        class="
+          menuItem
+          flex
+          h-12
+          items-center
+          shadow-md
+          justify-center
+          border border-transparent
+          font-medium
+          rounded-full
+          text-white
+          bg-midnightblue
+          hover:bg-gray-600
+        "
+        target="_blaank"
+      >
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a
+        href="https://github.com/ARasodha"
+        class="
+          menuItem
+          flex
+          h-12
+          items-center
+          shadow-md
+          justify-center
+          border border-transparent
+          font-medium
+          rounded-full
+          text-white
+          bg-midnightblue
+          hover:bg-gray-600
+        "
+        target="_blank"
+      >
+        <i class="fab fa-github"></i>
+      </a>
+      <a
+        href="assets/Arjun_Rasodha_Resume.pdf"
+        target="_blank"
+        class="
+          menuItem
+          flex
+          h-12
+          items-center
+          shadow-md
+          justify-center
+          border border-transparent
+          font-medium
+          rounded-full
+          text-white
+          bg-midnightblue
+          hover:bg-gray-600
+        "
+      >
+        <i class="fas fa-file-alt"></i>
+      </a>
+    </div>
+
+    <!-- Header -->
+    <div class="relative py-16 bg-white">
+      <div
+        class="hidden absolute top-0 inset-x-0 h-1/2 bg-white lg:block"
+        aria-hidden="true"
+      ></div>
+      <div class="max-w-7xl mx-auto bg-gray-200 lg:bg-transparent lg:px-8">
+        <div class="lg:grid lg:grid-cols-12">
+          <div
+            class="
+              relative
+              z-10
+              lg:col-start-1
+              lg:row-start-1
+              lg:col-span-4
+              lg:py-16
+              lg:bg-transparent
+            "
+          >
+            <div
+              class="absolute inset-x-0 h-1/2 bg-white lg:hidden"
+              aria-hidden="true"
+            ></div>
+            <div class="max-w-sm mx-auto px-4 sm:px-6 lg:p-0">
+              <div class="aspect-w-1 aspect-h-1">
+                <img
+                  class="object-cover object-center rounded-3xl shadow-2xl"
+                  src="/assets/arjun.a9f774ab.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="
+              relative
+              bg-gray-200
+              lg:col-start-3
+              lg:row-start-1
+              lg:col-span-10
+              lg:rounded-3xl
+              lg:grid lg:grid-cols-10
+              lg:items-center
+            "
+          >
+            <div
+              class="
+                relative
+                max-w-md
+                mx-auto
+                py-12
+                px-4
+                sm:max-w-3xl
+                sm:py-16
+                sm:px-6
+                lg:max-w-none
+                lg:p-0
+                lg:col-start-4 lg:col-span-6
+              "
+            >
+              <h2
+                class="text-3xl font-extrabold text-gray-900"
+                id="join-heading"
+              >
+               Hey! I'm Arjun. 
+              </h2>
+              <h4 class="text-xl text-gray-500 mt-1">
+                &#128205; Toronto, ON, Canada
+              </h4>
+              <p class="text-lg text-gray-900 mt-6">
+                I'm a full-stack Software Engineer currently based in 
+                Toronto, Ontario, with experience in
+                JavaScript/Node.js, Go, PostgreSQL, MongoDB, AWS, Docker, React and more. 
+              </p>
+              <p class="text-lg text-gray-900 mt-6">
+                Most recently, I built
+                <a
+                  class="text-navyblue hover:text-brightred"
+                  href="https://kuri-dlq.github.io/"
+                  target="_blank"
+                  >Kuri</a
+                >, an open-source, easy-to-configure, Dead-Letter Queue-as-a-Service for applications that uses a 
+                microservices architecture on an AWS infrastructure. 
+              </p>
+              <a
+                class="
+                  mt-6
+                  block
+                  w-full
+                  py-3
+                  px-5
+                  text-center
+                  bg-midnightblue
+                  border border-transparent
+                  rounded-md
+                  shadow-md
+                  text-base
+                  font-medium
+                  text-white
+                  hover:opacity-70
+                  sm:inline-block
+                  sm:w-auto
+                "
+                href="assets/Arjun_Rasodha_Resume.pdf"
+                target="_blank"
+                ><span class="text-xl mr-3"
+                  ><i class="fas fa-file-alt"></i></span
+                >Resume</a
+              >
+              <a
+                class="
+                  mt-6
+                  sm:mx-2
+                  block
+                  w-full
+                  py-3
+                  px-5
+                  text-center
+                  bg-navyblue
+                  border border-transparent
+                  rounded-md
+                  shadow-md
+                  text-base
+                  font-medium
+                  text-white
+                  hover:bg-brightred
+                  sm:inline-block
+                  sm:w-auto
+                "
+                href="https://kuri-dlq.github.io/"
+                target="_blank"
+                >Read Kuri Case Study</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kuri -->
+    <div class="relative py-16">
+      <div
+        class="hidden absolute top-0 inset-x-0 h-1/2 lg:block"
+        aria-hidden="true"
+      ></div>
+      <!-- kuri project div -->
+      <div class="bg-gradient-to-r from-navyblue to-brightred"> 
+        <div
+          class="
+            max-w-7xl
+            mx-auto
+            lg:to-transparent
+            lg:from-transparent
+            lg:bg-transparent
+            lg:px-8
+          "
+        >
+          <div class="lg:grid lg:grid-cols-12">
+            <div
+              class="
+                relative
+                z-10
+                lg:col-start-1
+                lg:row-start-1
+                lg:col-span-4
+                lg:py-16
+                lg:bg-transparent
+              "
+            >
+              <div
+                class="absolute inset-x-0 h-1/2 bg-white lg:hidden"
+                aria-hidden="true"
+              ></div>
+              <div class="max-w-sm mx-auto px-4 sm:px-6 lg:p-0">
+                <div class="aspect-w-1 aspect-h-1">
+                  <img
+                    class="object-cover object-center bg-white rounded-3xl shadow-2xl"
+                    src="/assets/kuri_logo.6d184c44.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              
+            </div>
+
+            <div
+              class="
+                relative
+                lg:col-start-3
+                lg:row-start-1
+                lg:col-span-10
+                lg:rounded-3xl
+                lg:grid lg:grid-cols-10
+                lg:items-center
+                lg:py-12
+              "
+            >
+              <div
+                class="
+                  relative
+                  max-w-md
+                  mx-auto
+                  py-12
+                  px-4
+                  sm:max-w-3xl
+                  sm:py-16
+                  sm:px-6
+                  lg:max-w-none
+                  lg:p-0
+                  lg:col-start-4 lg:col-span-6
+                "
+              >
+              <p class="text-2xl text-white mt-6">
+                Kuri provides a dead-letter queue that can be used with an AWS SQS Queue to provide additional DLQ functionality
+                such as, reciving dead-letter message notifications and viewing, updating, deleting and redriving individual messages.
+              </p>
+              <p class="text-2xl text-white mt-6"> 
+                Kuri was built for developers who want full control over their dead-letter messages
+                and want to be able to deploy and integrate an advanced dead-letter queue service in their 
+                infrastructure within minutes. 
+              </p>
+              <br>
+                <div class="wrap mx-auto">
+                  <div class="grid grid-rows-10 grid-cols-6">
+                    
+                    <div class="row-start-1 col-start-2 col-span-5 pb-8 self-end">
+                      <img class="object-cover rounded-lg" src="/assets/kuri-dashboard.e444d86f.png" alt="">
+                    </div>
+                    <div class="row-start-2 col-start-1 col-span-5 self-end ">
+                      <img class="rounded-lg" src="/assets/kuri.f8859b77.gif" alt="">
+                    </div>
+                  </div>
+                  <a
+                class="
+                  mt-6
+                  sm:mx-2
+                  block
+                  w-full
+                  py-3
+                  px-5
+                  text-center
+                  bg-white
+                  border border-transparent
+                  rounded-md
+                  shadow-md
+                  text-base
+                  font-medium
+                  text-navyblue
+                  hover:bg-white
+                  hover:text-brightred
+                  sm:inline-block
+                  sm:w-auto
+                  hover:bg-gray-300
+                "
+                href="https://kuri-dlq.github.io/"
+                target="_blank"
+                >Read Kuri Case Study</a
+              >
+              <a
+                class="
+                  mt-6
+                  sm:mx-2
+                  block
+                  w-full
+                  py-3
+                  px-5
+                  text-center
+                  bg-white
+                  border border-transparent
+                  rounded-md
+                  shadow-md
+                  text-base
+                  font-medium
+                  text-navyblue
+                  hover:bg-white
+                  hover:text-brightred
+                  sm:inline-block
+                  sm:w-auto
+                  hover:bg-gray-300
+                "
+                href="https://kuri-dlq.github.io/#presentation"
+                target="_blank"
+                >Watch the Presentation</a
+              > 
+                </div>
+                
+                
+              <!-- <div>
+                <img class="rounded-lg shadow-lg" src="images/fullarchitecture_white.png" alt="">
+              </div> -->
+            </div>
+          </div>
+        
+          </div>
+        
+        
+  
+      </div>
+    </div>
+  </div>
+
+    <!-- Other Projects -->
+    <div class="relative pt-16 pb-20 px-4 sm:px-6 lg:pt-16 lg:pb-28 lg:px-8">
+      <div class="absolute inset-0">
+        <div class="bg-white h-1/3 sm:h-2/3"></div>
+      </div>
+      <div class="relative max-w-7xl mx-auto">
+        <div class="text-center">
+          <h2
+            class="
+              text-3xl
+              tracking-tight
+              font-extrabold
+              text-gray-900
+              sm:text-4xl
+            "
+          >
+            Other Projects
+          </h2>
+        </div>
+        <div
+          class="
+            mt-12
+            max-w-lg
+            mx-auto
+            grid
+            gap-10
+            xl:grid-cols-3
+            lg:grid-cols-3
+            md:grid-cols-2
+            md:max-w-none
+          "
+        >
+        
+          <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+            <div class="flex-shrink-0 p-6 flex justify-center bg-gray-200">
+              <img
+                class="h-40 drop-shadow-lg filter object-scale-down"
+                src="/assets/reaction.49b4ba2c.png"
+                alt=""
+              />
+            </div>
+            <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+              <div class="flex-1">
+                <p class="text-xl font-semibold text-gray-900 mt-2">Jello</p>
+                <p class="mt-3 text-base text-gray-500">
+                  Trello-like task management app.
+                </p>
+                <p class="mt-3 text-base text-navyblue">
+                  Node.js/Express, MongoDB, React/Redux
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+            <div class="flex-shrink-0 p-6 flex justify-center bg-gray-200">
+              <img
+                class="h-40 drop-shadow-lg filter object-scale-down"
+                src="/assets/dijkstra.139d635c.png"
+                alt=""
+              />
+            </div>
+            <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+              <div class="flex-1">
+                <p class="text-xl font-semibold text-gray-900 mt-2">
+                  Airline Routes
+                </p>
+                <p class="mt-3 text-base text-gray-500">
+                  Airline routing application leveraging Dijkstra's algorithm to
+                  find the shortest path.
+                </p>
+                <p class="mt-3 text-base text-navyblue">React, JavaScript</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+            <div class="flex-shrink-0 p-6 flex justify-center bg-gray-200">
+              <img
+                class="h-40 drop-shadow-lg filter object-scale-down"
+                src="/assets/todotracker.8ca48b3c.png"
+                alt=""
+              />
+            </div>
+            <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+              <div class="flex-1">
+                <p class="text-xl font-semibold text-gray-900 mt-2">
+                  ToDo List 
+                </p>
+                <p class="mt-3 text-base text-gray-500">
+                  An interactive todo list manager. Node.js, Handlebars.js, jQuery and an Express.js API.
+                </p>
+                <p class="mt-3 text-base text-navyblue">
+                  Node.js/Express, Handlebars, HTML/CSS
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+            <div class="flex-shrink-0 p-6 flex justify-center bg-gray-200">
+              <img
+                class="h-40 drop-shadow-lg filter object-scale-down"
+                src="/assets/request-bucket.78a9e56d.png"
+                alt=""
+              />
+            </div>
+            <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+              <div class="flex-1">
+                <p class="text-xl font-semibold text-gray-900 mt-2">
+                  Request Bucket 
+                </p>
+                <p class="mt-3 text-base text-gray-500">
+                  RequestBin-like tool for receiving and debugging webhooks.
+                </p>
+                <p class="mt-3 text-base text-navyblue">
+                  Node.js/Express, PostgreSQL, Webhooks
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+            <div class="flex-shrink-0 p-6 flex justify-center bg-gray-200">
+              <img
+                class="h-40 drop-shadow-lg filter object-scale-down"
+                src="/assets/shopping-cart.a88f7d16.png"
+                alt=""
+              />
+            </div>
+            <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+              <div class="flex-1">
+                <p class="text-xl font-semibold text-gray-900 mt-2">
+                  Shopping Cart
+                </p>
+                <p class="mt-3 text-base text-gray-500">
+                  An e-commerce shopping cart app with a database backend.
+                </p>
+                <p class="mt-3 text-base text-navyblue">
+                  Node.js/Express, MongoDB, containerized with Docker
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+            <div class="flex-shrink-0 p-6 flex justify-center bg-gray-200">
+              <img
+                class="h-40 drop-shadow-lg filter object-scale-down"
+                src="/assets/contacts-manager.ae7b4055.png"
+                alt=""
+              />
+            </div>
+            <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+              <div class="flex-1">
+                <p class="text-xl font-semibold text-gray-900 mt-2">
+                  Contacts Manager
+                </p>
+                <p class="mt-3 text-base text-gray-500">
+                  A contact managing application with search and tag features.
+                </p>
+                <p class="mt-3 text-base text-navyblue">
+                  Node.js/Express, MVC Design Pattern, Handlebars
+                </p>
+              </div>
+            </div>
+          </div>
+
+ 
+
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="bg-navyblue">
+      <div class="mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
+          <span class="block">Let's Connect!</span>
+        </h2>
+        <p class="mt-4 mb-4 text-lg leading-6 text-gray-200">
+          I am looking for my next opportunity! Please get in touch if you think
+          I'd be a good fit for your team.
+        </p>
+        <div class="flex items-center justify-center flex-wrap">
+          <a
+            href="mailto:arjunrasodha4@gmail.com"
+            class="
+              w-2/5
+              mt-4
+              mx-2
+              inline-flex
+              items-center
+              shadow-md
+              justify-center
+              px-5
+              py-2
+              border border-transparent
+              font-medium
+              rounded-md
+              text-midnightblue
+              bg-white
+              hover:bg-gray-300
+              sm:w-auto
+            "
+            target="_blank"
+          >
+            <span class="text-xl mr-3"><i class="fas fa-envelope"></i></span
+            >Email
+          </a>
+          <a
+            href="https://www.linkedin.com/in/arjunrasodha"
+            class="
+              w-2/5
+              mt-4
+              mx-2
+              inline-flex
+              items-center
+              shadow-md
+              justify-center
+              px-5
+              py-2
+              border border-transparent
+              font-medium
+              rounded-md
+              text-midnightblue
+              bg-white
+              hover:bg-gray-300
+              sm:w-auto
+            "
+            target="_blank"
+          >
+            <span class="text-xl mr-3"><i class="fab fa-linkedin"></i></span
+            >LinkedIn
+          </a>
+          <a
+            href="https://github.com/ARasodha"
+            class="
+              w-2/5
+              mt-4
+              mx-2
+              inline-flex
+              items-center
+              shadow-md
+              justify-center
+              px-5
+              py-2
+              border border-transparent
+              font-medium
+              rounded-md
+              text-midnightblue
+              bg-white
+              hover:bg-gray-300
+              sm:w-auto
+            "
+            target="_blank"
+          >
+            <span class="text-xl mr-3"><i class="fab fa-github"></i></span
+            >GitHub
+          </a>
+          <a
+            href="assets/Arjun_Rasodha_Resume.pdf"
+            target="_blank"
+            class="
+              w-2/5
+              mt-4
+              mx-2
+              inline-flex
+              items-center
+              shadow-md
+              justify-center
+              px-5
+              py-2
+              border border-transparent
+              font-medium
+              rounded-md
+              text-midnightblue
+              bg-white
+              hover:bg-gray-300
+              sm:w-auto
+            "
+          >
+            <span class="text-xl mr-3"><i class="fas fa-file-alt"></i></span
+            >Resume
+          </a>
+        </div>
+      </div>
+    </div>
+
+    
+  </body>
+</html>
