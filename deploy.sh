@@ -5,7 +5,6 @@ set -e
 
 # build
 npm run build
-cp CNAME dist
 cp assets/Arjun_Rasodha_Resume.pdf dist/assets
 
 # navigate into the build output directory
